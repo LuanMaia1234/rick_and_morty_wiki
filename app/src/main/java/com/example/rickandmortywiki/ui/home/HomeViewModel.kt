@@ -15,6 +15,9 @@ class HomeViewModel(private val repository: RickAndMortyRepository) : ViewModel(
     private val _state = MutableStateFlow<CharacterState>(CharacterState.Initial)
     val state: StateFlow<CharacterState> = _state
 
+    private var _currentPagePosition = 0
+    val currentPagePosition get() = _currentPagePosition
+
     init {
         getCharacters()
     }
@@ -30,5 +33,9 @@ class HomeViewModel(private val repository: RickAndMortyRepository) : ViewModel(
                 _state.value = CharacterState.Error(result.message)
             }
         }
+    }
+
+    fun updatePagePosition(position: Int) {
+        _currentPagePosition = position
     }
 }

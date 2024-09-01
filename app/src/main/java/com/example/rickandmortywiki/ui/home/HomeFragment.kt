@@ -80,6 +80,7 @@ class HomeFragment : Fragment(), CharacterItemClickListener {
         pageChangeListener = object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
+                viewModel.updatePagePosition(position)
                 indicatorList.forEachIndexed { index, imageView ->
                     if (position == index) {
                         imageView.setImageResource(R.drawable.selected_indicator)
@@ -88,7 +89,6 @@ class HomeFragment : Fragment(), CharacterItemClickListener {
                     }
                 }
             }
-
         }
         binding.carouselViewPager.apply {
             adapter = homeAdapter
@@ -100,6 +100,11 @@ class HomeFragment : Fragment(), CharacterItemClickListener {
                 page.scaleY = 0.85f + (1 - abs(position)) * 0.15f
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.carouselViewPager.setCurrentItem(viewModel.currentPagePosition, false)
     }
 
     private fun setupIndicator(size: Int) {
