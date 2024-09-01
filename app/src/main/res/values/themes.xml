@@ -1,0 +1,51 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.RickAndMortyWiki" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/main</item>
+        <item name="colorPrimaryVariant">@color/dark_main</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:windowBackground">?attr/colorPrimary</item>
+    </style>
+
+    <!--BottomNavigationView-->
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <!--Container color-->
+        <item name="colorSurfaceContainer">?attr/colorPrimaryVariant</item>
+
+        <!--Icon active color-->
+        <item name="colorOnSecondaryContainer">@color/white</item>
+
+        <!--Text active color-->
+        <item name="colorOnSurface">@color/white</item>
+
+        <!--Text/Icon inactive color-->
+        <item name="colorOnSurfaceVariant">@color/grey</item>
+
+        <!--Active indicator color-->
+        <item name="colorSecondaryContainer">?attr/colorPrimary</item>
+
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:windowBackground">?attr/colorPrimary</item>
+    </style>
+
+    <!--Toolbar-->
+    <style name="Widget.App.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Toolbar</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Toolbar" parent="">
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <style name="Theme.RickAndMortyWiki" parent="Base.Theme.RickAndMortyWiki" />
+
+    <style name="Theme.SplashScreen" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_image</item>
+        <item name="android:statusBarColor">@color/dark_main</item>
+    </style>
+</resources>

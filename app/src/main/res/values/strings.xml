@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Rick and Morty Wiki</string>
+    <string name="alive">Alive</string>
+    <string name="dead">Dead</string>
+    <string name="unknown">Unknown</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="genderless">Genderless</string>
+    <string name="home">Home</string>
+    <string name="locations">Locations</string>
+    <string name="episodes">Episodes</string>
+    <string name="search">Search</string>
+    <string name="residents">Residents</string>
+    <string name="details">Details</string>
+    <string name="name">Name</string>
+    <string name="status">Status:</string>
+    <string name="specie">Specie:</string>
+    <string name="gender">Gender:</string>
+    <string name="location">Location:</string>
+    <string name="enter_a_character_name">Enter a character name</string>
+    <string name="no_results_found">No results found</string>
+    <string name="adjust_your_search_or_try_again_later">Adjust your search or try again later</string>
+    <string name="retry">Retry</string>
+    <string name="unexpected_error">Something went wrong. Please try again</string>
+    <string name="no_internet_error">Please check your network connection</string>
+</resources>

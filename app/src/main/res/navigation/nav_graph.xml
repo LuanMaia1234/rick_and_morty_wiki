@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.example.rickandmortywiki.ui.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_fragment_to_character_details_fragment"
+            app:destination="@id/character_details_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/search_fragment"
+        android:name="com.example.rickandmortywiki.ui.search.SearchFragment"
+        android:label="@string/episodes"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_search_fragment_to_character_details_fragment"
+            app:destination="@id/character_details_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/locations_fragment"
+        android:name="com.example.rickandmortywiki.ui.locations.LocationsFragment"
+        android:label="@string/locations"
+        tools:layout="@layout/fragment_locations" >
+        <action
+            android:id="@+id/action_locations_fragment_to_residents_fragment"
+            app:destination="@id/residents_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/character_details_fragment"
+        android:name="com.example.rickandmortywiki.ui.details.CharacterDetailsFragment"
+        android:label="@string/details"
+        tools:layout="@layout/fragment_character_details">
+
+        <argument
+            android:name="character"
+            app:argType="com.example.rickandmortywiki.data.entities.CharacterEntity" />
+    </fragment>
+    <fragment
+        android:id="@+id/residents_fragment"
+        android:name="com.example.rickandmortywiki.ui.residents.ResidentsFragment"
+        android:label="fragment_residents"
+        tools:layout="@layout/fragment_residents">
+        <argument
+            android:name="residentIdList"
+            app:argType="string[]" />
+        <action
+            android:id="@+id/action_residents_fragment_to_character_details_fragment"
+            app:destination="@id/character_details_fragment" />
+    </fragment>
+
+</navigation>
