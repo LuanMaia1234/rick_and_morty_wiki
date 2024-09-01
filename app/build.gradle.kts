@@ -3,7 +3,6 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.jetbrains.kotlin.plugin.parcelize)
     alias(libs.plugins.androidx.navigation.safeargs)
-    alias(libs.plugins.com.google.devtools.ksp)
 }
 
 android {
@@ -59,6 +58,8 @@ dependencies {
 
     implementation(libs.glide)
 
+    implementation(libs.shimmer)
+
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
 
@@ -68,7 +69,4 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
-    implementation(libs.glide)
-//    ksp(libs.glide.compiler)
-    implementation(libs.shimmer)
 }
