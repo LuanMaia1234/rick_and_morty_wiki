@@ -10,7 +10,6 @@ Home  | Search | Locations
 
 ## ✨ Features
  - Display a carousel with the main characters of the show.
- - Display a list of characters with their names and images.
  - Search for characters by their names.
  - Display a list of locations with all residents.
  - View detailed information about each character.
