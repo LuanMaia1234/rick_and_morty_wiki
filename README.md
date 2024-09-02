@@ -1,4 +1,4 @@
-# Rick and Morty Wiki
+# 👴👦 Rick and Morty Wiki
 
 Rick and Morty Wiki is an Android app for fans who crave detailed and accurate information about all characters and locations that have appeared on the show.
 
