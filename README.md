@@ -4,7 +4,7 @@ Rick and Morty Wiki is an Android app for fans who crave detailed and accurate i
 
 ## ⏩ Preview
 
-Home  | Search | Location
+Home  | Search | Locations
 ------------- | ------------- | -------------
 ![](https://github.com/LuanMaia1234/rick_and_morty_wiki/blob/main/assets/preview/home.gif?raw=true) | ![](https://github.com/LuanMaia1234/rick_and_morty_wiki/blob/main/assets/preview/search.gif?raw=true) | ![](https://github.com/LuanMaia1234/rick_and_morty_wiki/blob/main/assets/preview/location.gif?raw=true)
 
