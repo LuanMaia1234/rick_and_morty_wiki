@@ -26,8 +26,8 @@ Home  | Search | Locations
 - [X] Solid
 - [X] ViewBinding
 - [X] StateFlow
-- [X] Koin
-- [X] Coroutines 
+- [X] Coroutines
+- [X] Koin 
 - [X] Retrofit
 
 ## 🚀 Getting Started
