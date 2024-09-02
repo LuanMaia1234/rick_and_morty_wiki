@@ -33,6 +33,6 @@ Home  | Search | Locations
 
 To run this app, you'll need to have Android Studio installed. Follow these steps to get started:
 
- - Clone this repository: git clone https://github.com/LuanMaia1234/todo_list.git
+ - Clone this repository: git clone https://github.com/LuanMaia1234/rick_and_morty_wiki.git
  - Open the project in Android Studio.
  - Build and run the app.
