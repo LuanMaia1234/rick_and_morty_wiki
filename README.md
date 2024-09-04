@@ -6,7 +6,7 @@ Rick and Morty Wiki is an Android app for fans who crave detailed and accurate i
 
 Home  | Search | Locations
 ------------- | ------------- | -------------
-![](https://github.com/LuanMaia1234/rick_and_morty_wiki/blob/main/assets/preview/home.gif?raw=true) | ![](https://github.com/LuanMaia1234/rick_and_morty_wiki/blob/main/assets/preview/search.gif?raw=true) | ![](https://github.com/LuanMaia1234/rick_and_morty_wiki/blob/main/assets/preview/location.gif?raw=true)
+![](https://github.com/luanolimpio/rick_and_morty_wiki/blob/main/assets/preview/home.gif?raw=true) | ![](https://github.com/luanolimpio/rick_and_morty_wiki/blob/main/assets/preview/search.gif?raw=true) | ![](https://github.com/luanolimpio/rick_and_morty_wiki/blob/main/assets/preview/location.gif?raw=true)
 
 ## ✨ Features
  - Display a carousel with the main characters of the show.
@@ -33,6 +33,6 @@ Home  | Search | Locations
 
 To run this app, you'll need to have Android Studio installed. Follow these steps to get started:
 
- - Clone this repository: git clone https://github.com/LuanMaia1234/rick_and_morty_wiki.git
+ - Clone this repository: git clone https://github.com/luanolimpio/rick_and_morty_wiki.git
  - Open the project in Android Studio.
  - Build and run the app.
