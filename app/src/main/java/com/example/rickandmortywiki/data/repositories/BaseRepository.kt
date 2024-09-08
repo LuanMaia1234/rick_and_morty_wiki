@@ -12,7 +12,7 @@ abstract class BaseRepository(private val context: Context) {
         return try {
             val result = execute()
             if (result.isSuccessful && result.body() != null) {
-                Resource.Success(data = result.body()!!)
+                Resource.Success(result.body()!!)
             } else {
                 Resource.Error(
                     result.errorBody()?.string() ?: context.getString(R.string.unexpected_error)
