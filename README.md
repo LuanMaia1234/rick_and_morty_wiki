@@ -23,6 +23,7 @@ Home  | Search | Locations
     - [X] Dependency Injection
     - [X] Pagination 
 - [X] Solid
+- [X] Unit Test
 - [X] ViewBinding
 - [X] StateFlow
 - [X] Coroutines
