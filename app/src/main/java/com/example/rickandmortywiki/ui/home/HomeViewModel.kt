@@ -5,12 +5,15 @@ import androidx.lifecycle.viewModelScope
 import com.example.rickandmortywiki.utils.resource.Resource
 import com.example.rickandmortywiki.data.repositories.RickAndMortyRepository
 import com.example.rickandmortywiki.ui.common.CharacterState
-import kotlinx.coroutines.Dispatchers
+import com.example.rickandmortywiki.utils.dispatcher.DispatcherProvider
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class HomeViewModel(private val repository: RickAndMortyRepository) : ViewModel() {
+class HomeViewModel(
+    private val dispatcher: DispatcherProvider,
+    private val repository: RickAndMortyRepository
+) : ViewModel() {
 
     private val _state = MutableStateFlow<CharacterState>(CharacterState.Initial)
     val state: StateFlow<CharacterState> = _state
@@ -22,7 +25,7 @@ class HomeViewModel(private val repository: RickAndMortyRepository) : ViewModel(
         getCharacters()
     }
 
-    fun getCharacters() = viewModelScope.launch(Dispatchers.IO) {
+    fun getCharacters() = viewModelScope.launch(dispatcher.io) {
         _state.value = CharacterState.Loading
         when (val result = repository.getCharacters(page = 1, name = null)) {
             is Resource.Success -> {

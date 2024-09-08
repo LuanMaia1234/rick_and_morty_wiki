@@ -11,6 +11,8 @@ import com.example.rickandmortywiki.ui.search.SearchViewModel
 import com.example.rickandmortywiki.ui.home.HomeViewModel
 import com.example.rickandmortywiki.ui.locations.LocationViewModel
 import com.example.rickandmortywiki.ui.residents.ResidentViewModel
+import com.example.rickandmortywiki.utils.dispatcher.DefaultDispatcherProvider
+import com.example.rickandmortywiki.utils.dispatcher.DispatcherProvider
 import com.google.gson.GsonBuilder
 import org.koin.androidx.viewmodel.dsl.viewModelOf
 import org.koin.core.module.dsl.bind
@@ -37,6 +39,7 @@ val appModule = module {
     }
 
     singleOf(::RickAndMortyRepositoryImpl) { bind<RickAndMortyRepository>() }
+    singleOf(::DefaultDispatcherProvider) { bind<DispatcherProvider>() }
     viewModelOf(::HomeViewModel)
     viewModelOf(::SearchViewModel)
     viewModelOf(::LocationViewModel)

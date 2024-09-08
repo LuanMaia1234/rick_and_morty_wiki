@@ -5,12 +5,15 @@ import androidx.lifecycle.viewModelScope
 import com.example.rickandmortywiki.data.entities.CharacterEntity
 import com.example.rickandmortywiki.utils.resource.Resource
 import com.example.rickandmortywiki.data.repositories.RickAndMortyRepository
-import kotlinx.coroutines.Dispatchers
+import com.example.rickandmortywiki.utils.dispatcher.DispatcherProvider
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class SearchViewModel(private val repository: RickAndMortyRepository) : ViewModel() {
+class SearchViewModel(
+    private val dispatcher: DispatcherProvider,
+    private val repository: RickAndMortyRepository
+) : ViewModel() {
 
     private val _state = MutableStateFlow<SearchState>(SearchState.Initial)
     val state: StateFlow<SearchState> = _state
@@ -22,7 +25,7 @@ class SearchViewModel(private val repository: RickAndMortyRepository) : ViewMode
     }
 
     fun getCharacters(name: String? = null, isPagination: Boolean = false) =
-        viewModelScope.launch(Dispatchers.IO) {
+        viewModelScope.launch(dispatcher.io) {
             if (search != name && !isPagination) {
                 _state.value = SearchState.Initial
                 search = name

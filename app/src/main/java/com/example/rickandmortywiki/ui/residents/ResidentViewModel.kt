@@ -4,18 +4,21 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.rickandmortywiki.data.repositories.RickAndMortyRepository
 import com.example.rickandmortywiki.ui.common.CharacterState
+import com.example.rickandmortywiki.utils.dispatcher.DispatcherProvider
 import com.example.rickandmortywiki.utils.resource.Resource
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class ResidentViewModel(private val repository: RickAndMortyRepository) : ViewModel()  {
+class ResidentViewModel(
+    private val dispatcher: DispatcherProvider,
+    private val repository: RickAndMortyRepository
+) : ViewModel() {
 
     private val _state = MutableStateFlow<CharacterState>(CharacterState.Initial)
     val state: StateFlow<CharacterState> = _state
 
-    fun getCharactersById(id: List<String>) = viewModelScope.launch(Dispatchers.IO) {
+    fun getCharactersById(id: List<String>) = viewModelScope.launch(dispatcher.io) {
         _state.value = CharacterState.Loading
         when (val result = repository.getCharactersById(id)) {
             is Resource.Success -> {
